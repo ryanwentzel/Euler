@@ -10,6 +10,11 @@ namespace Ryan.ProjectEuler.Core.Problems
         int Number { get; }
         string Description { get; }
 
-        long Solve();
+        object Solve();
     }
+
+	public interface IProblem<T> : IProblem
+	{
+		new T Solve();
+	}
 }

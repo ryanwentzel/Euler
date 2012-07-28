@@ -14,7 +14,7 @@ namespace Ryan.ProjectEuler.Runner
             string message = string.Format("Problem {0}: {1}", problem.Number.ToString().PadLeft(3, '0'), problem.Description);
             Console.WriteLine(message);
 
-            long solution = problem.Solve();
+            var solution = problem.Solve();
             Console.WriteLine("\nThe answer is: {0}", solution);
             Console.WriteLine("----------------------------");
         }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ryan.ProjectEuler.Core.Problems
 {
-    public class Problem01 : IProblem
+    public class Problem01 : IProblem<long>
     {
         public int Number 
         {
@@ -29,5 +29,10 @@ namespace Ryan.ProjectEuler.Core.Problems
                               .Where(x => x % 3 == 0 || x % 5 == 0)
                               .Sum();
         }
+
+		object IProblem.Solve()
+		{
+			return this.Solve();
+		}
     }
 }
