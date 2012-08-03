@@ -27,7 +27,7 @@ namespace Ryan.ProjectEuler.Runner
                 .ResolveAll<IProblem>()
                 .OrderBy(x => x.Number)
                 .ToList()
-                .ForEach(x => SolveProblem(x));
+                .ForEach(SolveProblem);
 
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
